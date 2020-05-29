@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+/*'Montserrat', sans-serif;*/
+
+body{
+	background-color: #222222;
+}
+
+a{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	text-decoration-line: underline;
+	color: #4579FF;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.row{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tex{
+	margin-top: 15px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+
+	color: #FFFFFF;
+}
+
+.profinf{
+	margin-top: 40px;
+}
+
+.menu{
+	margin-top: 20px;
+}
+
+.submenu{
+	position: absolute;
+	z-index: 5;
+	background-color: #4C4C4C;
+	height: 100%;
+	width: 20%;
+	left: 0;
+	top: 0;
+
+	/*display: none;*/
+
+	visibility: hidden;
+	transform: perspective(600px) rotateX(-90deg);
+	transform-origin: 0% 0%;
+	transition: .6s ease-in-out;
+
+	/*opacity: 0;
+	transform: scaleY(0);
+	transform-origin :0 0;
+	transition: .5s ease-in-out;
+*/
+	/*visibility: hidden;
+	opacity: 0;
+	transform: scale(.8);
+	transition: .4s ease-in-out;*/
+}
+
+li:hover .submenu{
+	/*display: block;*/
+
+	visibility: visible;
+	opacity: 1;
+	transform: perspective(600px) rotateX(0deg);
+
+	/*opacity: 1;
+	transform: scaleY(1);*/
+
+	/*visibility: visible;
+	opacity: 1;
+	transform: scale(1);*/
+}
+
+.itm{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
