@@ -2,7 +2,7 @@
 
 	session_start();
 
-	$link = mysqli_connect("localhost", "root", "usbw", "first");
+	$link = mysqli_connect("localhost", $_SESSION['db_user'], $_SESSION['db_pass'], $_SESSION['db_name']);
 
 	$sql = "SELECT * FROM `test` WHERE `id` = '" . $_SESSION['id'] . "'";
 	$result = mysqli_query($link, $sql);

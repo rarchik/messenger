@@ -2,8 +2,13 @@
 	session_start();
 	$_SESSION['corpas'] = 0;
 
+	$_SESSION['db_user'] = "root";
+	$_SESSION['db_pass'] = "usbw";
+	$_SESSION['db_name'] = "first";
+
+
 	if(isset($_POST["login"])){
-		$link = mysqli_connect("localhost", "root", "usbw", "first");
+		$link = mysqli_connect("localhost", $_SESSION['db_user'], $_SESSION['db_pass'], $_SESSION['db_name']);
 
 		$sql = "SELECT * FROM `test` WHERE `login` = '" . $_POST["login"] . "'";
 		$result = mysqli_query($link, $sql);

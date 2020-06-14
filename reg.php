@@ -7,7 +7,7 @@
 		$pass_che = $_POST["pass"];
 		$passc_che = $_POST["passc"];
 
-		$link = mysqli_connect("localhost", "root", "usbw", "first");
+		$link = mysqli_connect("localhost", $_SESSION['db_user'], $_SESSION['db_pass'], $_SESSION['db_name']);
 		$sql = "SELECT * FROM `test` WHERE `login` = '" . $_POST["login"] . "'";
 		$result = mysqli_query($link, $sql);
 		$result = mysqli_fetch_array($result);
@@ -16,7 +16,7 @@
 		}
 		else{
 			if ($pass_che == $passc_che) {
-				$link = mysqli_connect("localhost", "root", "usbw", "first");
+				$link = mysqli_connect("localhost", $_SESSION['db_user'], $_SESSION['db_pass'], $_SESSION['db_name']);
 
 				$sql = "SELECT `id`FROM `test`";
 				$result = mysqli_query($link, $sql);
